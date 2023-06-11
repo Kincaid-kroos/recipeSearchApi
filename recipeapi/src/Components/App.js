@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import Recipess from './Recipe';
+import Footer from './Footer'
 
 
 function App() {
@@ -59,6 +60,7 @@ const getsearchOnSubmit = (e) =>{
 ))}
     
      </section>
+     <Footer />
     </div>
   );
 }
