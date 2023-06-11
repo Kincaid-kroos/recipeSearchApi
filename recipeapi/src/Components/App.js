@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Recipess from './Recipe';
 import Footer from './Footer'
+import Header from './Header';
 
 
 function App() {
@@ -45,10 +46,15 @@ const getsearchOnSubmit = (e) =>{
 
   return (
     <div className="App">
+      <main>
+<Header />
+      </main>
+     <div>
      <form className='search-form'  onSubmit={getsearchOnSubmit}>
 <input  className='search-bar' value={search}  onChange={handleChanges}></input>
 <button className='search-button' >Search</button>
      </form>
+     </div>
      <section>
       {recipes.map(recipe => (
         <Recipess
