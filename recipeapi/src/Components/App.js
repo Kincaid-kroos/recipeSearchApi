@@ -33,7 +33,7 @@ const getRecipe = async () => {
   }
 };
 
- const handleChanges = (e) => {
+ const handleChangesOnInput = (e) => {
 const {value} = e.target
 setSearch(value)
  }
@@ -51,7 +51,7 @@ const getsearchOnSubmit = (e) =>{
       </main>
      <div>
      <form className='search-form'  onSubmit={getsearchOnSubmit}>
-<input  className='search-bar' value={search}  onChange={handleChanges}></input>
+<input  className='search-bar' value={search}  onChange={handleChangesOnInput}></input>
 <button className='search-button' >Search</button>
      </form>
      </div>
