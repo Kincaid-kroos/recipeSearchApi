@@ -49,19 +49,36 @@ const getsearchOnSubmit = (e) =>{
       <main>
 <Header />
       </main>
-     <div>
-     <form className='search-form'  onSubmit={getsearchOnSubmit}>
-<input  className='search-bar' value={search}  onChange={handleChangesOnInput}></input>
-<button className='search-button' >Search</button>
+     <div className='flex justify-center items-center'>
+     <form className='flex gap-4'  onSubmit={getsearchOnSubmit}>
+<input  className='rounded-full' value={search}  onChange={handleChangesOnInput} placeholder='Banana'></input>
+<button className='bg-[#7c2525] text-white rounded-full px-4 py-2' >Search</button>
      </form>
      </div>
-     <section>
-      {recipes.map(recipe => (
+     <div className='md:mx-8 mt-6'>
+     <h2 className="font-bold text-left text-[#e9dcd9] md:pt-4">
+          Frequent Searches?
+        </h2>
+        <div className='flex flex-wrap pt-2 gap-1'>
+          <p className='bg-[#7c2525] text-white rounded-full px-4 py-2'>Chocolate</p>
+          <p className='bg-[#367c25] text-white rounded-full px-4 py-2'>Coffee</p>
+          <p className='bg-[#45a9d8] text-white rounded-full px-4 py-2'>Banana</p>
+          <p className='bg-[#d1aa3f] text-white rounded-full px-4 py-2'>Pizza</p>
+          <p className='bg-[#6a38c7] text-white rounded-full px-4 py-2'>Capuccino</p>
+          <p className='bg-[#0c0f2e] text-white rounded-full px-4 py-2'>Rice</p>
+          <p className='bg-[#38c757] text-white rounded-full px-4 py-2'>Mango</p>
+        </div>
+      
+
+     </div>
+     <section className='flex justify-around flex-wrap space-x-8'>
+      {recipes.map(recipex => (
         <Recipess
-        key={recipe.recipe.label}
-        title = {recipe.recipe.label}
-        Calories = {recipe.recipe.calories}
-        img = {recipe.recipe.image}
+        key={recipex.recipe.label}
+        title = {recipex.recipe.label}
+        Calories = {recipex.recipe.calories}
+        img = {recipex.recipe.image}
+        ingredients = {recipex.recipe.ingredients}
 />
 ))}
     
