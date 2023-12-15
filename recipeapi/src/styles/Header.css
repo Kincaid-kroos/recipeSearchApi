@@ -1,5 +1,5 @@
 .navcss{
-    background-color: rgb(216, 127, 25);
+    background-color: #d87f19;
     position: relative;
     margin-bottom: 2rem;
     
@@ -8,10 +8,9 @@
     
     }
     .navtitle{
-        text-align: center;
         font-weight: bold;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: whitesmoke;
-        margin-left: 10px;
+        
         
     }
