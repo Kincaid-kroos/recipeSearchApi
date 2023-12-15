@@ -43,6 +43,11 @@ const getsearchOnSubmit = (e) =>{
   setSearch('')
 }
 
+//a function to handle click
+const frequentSearchClick = (item) => {
+  setQuery(item)
+}
+ 
 
   return (
     <div className="App">
@@ -51,23 +56,26 @@ const getsearchOnSubmit = (e) =>{
       </main>
      <div className='flex justify-center items-center'>
      <form className='flex gap-4'  onSubmit={getsearchOnSubmit}>
-<input  className='rounded-full' value={search}  onChange={handleChangesOnInput} placeholder='Banana'></input>
+<input  className='rounded-full' value={search}  onChange={handleChangesOnInput} placeholder='Pilau'></input>
 <button className='bg-[#7c2525] text-white rounded-full px-4 py-2' >Search</button>
      </form>
      </div>
      <div className='md:mx-8 mt-6'>
      <h2 className="font-bold text-left text-[#e9dcd9] md:pt-4">
-          Frequent Searches?
+          Frequent Searches?  
         </h2>
+        
+        
         <div className='flex flex-wrap pt-2 gap-1'>
-          <p className='bg-[#7c2525] text-white rounded-full px-4 py-2'>Chocolate</p>
-          <p className='bg-[#367c25] text-white rounded-full px-4 py-2'>Coffee</p>
-          <p className='bg-[#45a9d8] text-white rounded-full px-4 py-2'>Banana</p>
-          <p className='bg-[#d1aa3f] text-white rounded-full px-4 py-2'>Pizza</p>
-          <p className='bg-[#6a38c7] text-white rounded-full px-4 py-2'>Capuccino</p>
-          <p className='bg-[#0c0f2e] text-white rounded-full px-4 py-2'>Rice</p>
-          <p className='bg-[#38c757] text-white rounded-full px-4 py-2'>Mango</p>
+          <p className='bg-[#7c2525] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('chocolate')} >Chocolate</p>
+          <p className='bg-[#367c25] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('coffee')}>Coffee</p>
+          <p className='bg-[#45a9d8] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('banana')}>Banana</p>
+          <p className='bg-[#d1aa3f] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('pizza')}>Pizza</p>
+          <p className='bg-[#6a38c7] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('cappucino')}>Cappucino</p>
+          <p className='bg-[#0c0f2e] text-white rounded-full px-4 py-2' onClick={() => frequentSearchClick('cake')}>Cake</p>
+          <p className='bg-[#38c757] text-white rounded-full px-4 py-2'onClick={() => frequentSearchClick('mango')}>Mango</p>
         </div>
+        
       
 
      </div>
